@@ -1,0 +1,129 @@
+register:
+    path: /registro
+    controller: App\Controller\UserController::register
+    methods: [POST]
+
+login:
+    path: /login
+    controller: App\Controller\UserController::login
+    methods: [POST]
+
+edit_user:
+    path: /editar-usuario
+    controller: App\Controller\UserController::edit
+    methods: [POST]
+
+get_user_identity:
+    path: /user-identity
+    controller: App\Controller\UserController::getUserIdentity
+    methods: [POST]
+
+upload_user_avatar:
+    path: /upload-avatar
+    controller: App\Controller\UserController::uploadAvatar
+    methods: [POST]
+
+get_Avatar:
+    path: /avatar/{filename}
+    controller: App\Controller\UserController::getAvatar
+    methods: [GET]
+
+get_avc:
+    path: /avc/{avc_id}
+    controller: App\Controller\AvcController::getAvc
+    methods: [GET]
+
+avc_create:
+    path: /crear-avc
+    controller: App\Controller\AvcController::create
+    methods: [POST]
+
+avc_update:
+    path: /actualizar-avc
+    controller: App\Controller\AvcController::update
+    methods: [PUT]
+
+avc_delete:
+    path: /borrar-avc
+    controller: App\Controller\AvcController::delete
+    methods: [DELETE]
+
+upload_avc_image:
+    path: /subir-imagen-avc/{avc_id}
+    controller: App\Controller\AvcController::uploadImage
+    methods: [POST]
+
+get_avc_image:
+    path: /imagen-avc/{filename}
+    controller: App\Controller\AvcController::getImage
+    methods: [GET]
+
+get_episodes:
+    path: /episodios
+    controller: App\Controller\EpisodeController::getEpisodes
+    methods: [POST]
+
+get_episode:
+    path: /episodio/{episode_id}
+    controller: App\Controller\EpisodeController::getEpisode
+    methods: [GET]
+
+episode_create:
+    path: /crear-episodio
+    controller: App\Controller\EpisodeController::create
+    methods: [POST]
+
+episode_update:
+    path: /actualizar-episodio
+    controller: App\Controller\EpisodeController::update
+    methods: [PUT]
+
+episode_delete:
+    path: /borrar-episodio
+    controller: App\Controller\EpisodeController::delete
+    methods: [DELETE]
+
+review_create:
+    path: /crear-review
+    controller: App\Controller\ReviewController::create
+    methods: [POST]
+
+review_update:
+    path: /actualizar-review
+    controller: App\Controller\ReviewController::update
+    methods: [PUT]
+
+review_delete:
+    path: /borrar-review
+    controller: App\Controller\ReviewController::delete
+    methods: [DELETE]
+
+get_avc_reviews:
+    path: /avc-reviews
+    controller: App\Controller\ReviewController::getAvcReviews
+    methods: [POST]
+
+get_user_review:
+    path: /user-review
+    controller: App\Controller\ReviewController::getUserReview
+    methods: [POST]
+
+get_user_reviews:
+    path: /user-reviews
+    controller: App\Controller\ReviewController::getUserReviews
+    methods: [POST]
+
+get_reviews:
+    path: /reviews
+    controller: App\Controller\ReviewController::getReviews
+    methods: [POST]
+
+busqueda:
+    path: /busqueda/{search}
+    controller: App\Controller\AvcController::search
+    methods: [GET]
+
+get_Avc:
+    path: /home
+    controller: App\Controller\AvcController::getLastAvcs
+    methods: [GET]
